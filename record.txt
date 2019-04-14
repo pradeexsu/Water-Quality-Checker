@@ -1,0 +1,4 @@
+tds value :                  200	,Quality of Water : Excellent
+tds value :                  120	,Quality of Water : Excellent
+tds value :                  800	,Quality of Water : Fair
+tds value :                  500	,Quality of Water : Good
