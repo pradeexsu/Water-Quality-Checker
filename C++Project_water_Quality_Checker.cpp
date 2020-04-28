@@ -14,6 +14,7 @@
 	float getTDS(float x,float y);
 	string quality(float tds);
 	void run();
+	string space = "\t\t\t\t\t";
 	int main(){	
 
 	do{	
@@ -25,10 +26,11 @@ void getScreen(){
 	char choice;
 	screen:
 	cout<<"\n\n\n\n\n";	
-	cout<<"\t\t\t\t\t"<<"1. Check qulity of Water.\n";
-	cout<<"\t\t\t\t\t"<<"2. Show Recoade.\n";
-	cout<<"\t\t\t\t\t"<<"3. Exit.\n\n";
-	cout<<"\t\t\t\t\t"<<"Select ";
+	
+	cout<<space<<"1. Check qulity of Water.\n";
+	cout<<space<<"2. Show Recoade.\n";
+	cout<<space<<"3. Exit.\n\n";
+	cout<<space<<"Select ";
 	choice=getch();
 	switch(choice){
 		case '1':
