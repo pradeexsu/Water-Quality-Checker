@@ -1,20 +1,24 @@
 /*
 		name :pradeep suthar
 */
-	#include <fstream>
-	#include <iomanip>
-	#include<iostream>
-	#include<conio.h>
-	using namespace std;
-	void getScreen();
-	fstream record;
-	void welcome();
-	void readRecoade();
-	void setData(float data);
-	float getTDS(float x,float y);
-	string quality(float tds);
-	void run();
-	string space = "\t\t\t\t\t";
+#include <fstream>
+#include <iomanip>
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+fstream record;
+string space = "\t\t\t\t\t";
+
+void getScreen();
+void welcome();
+void readRecoade();
+void setData(float data);
+float getTDS(float x,float y);
+string quality(float tds);
+void run();
+
+
 int main()
 {	
 
@@ -22,19 +26,21 @@ int main()
 	{	
 		getScreen();
 	} while(true);
-}	
-void getScreen(){
-		welcome();
+}
+
+void getScreen()
+{
+	welcome();
 	char choice;
 	screen:
 	cout<<"\n\n\n\n\n";	
-	
 	cout<<space<<"1. Check qulity of Water.\n";
 	cout<<space<<"2. Show Recoade.\n";
 	cout<<space<<"3. Exit.\n\n";
 	cout<<space<<"Select ";
 	choice=getch();
-	switch(choice){
+	switch(choice)
+	{
 		case '1':
 			run();
 			break;
