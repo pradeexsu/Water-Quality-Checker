@@ -15,11 +15,12 @@
 	string quality(float tds);
 	void run();
 	string space = "\t\t\t\t\t";
-	int main(){	
+	int main()
+	{	
 
 	do{	
 	getScreen();
-	}while(true);
+	} while(true);
 	}	
 void getScreen(){
 		welcome();
