@@ -98,30 +98,32 @@ void run()
 float getTDS(float P, float Q)
 {
 	float tds = (P-Q)*1000;
-	//		he TDS of your solution: TDS=[(A-B) * 1000]/mL
+	// he TDS of your solution: TDS=[(A-B) * 1000]/mL
 	return tds;
 }
 void readRecoade()
 {
 	record.open("record.txt",ios::in);
 	string line;
-	cout<<'\n';
-	while ( getline(record,line) )
-    {
-      cout << line <<'\n';
-    }
-    record.close();
+	cout << '\n';
+	while (getline(record, line))
+    	{
+      		cout << line <<'\n';
+    	}
+    	record.close();
 }
-void setData(float tds){
+void setData(float tds)
+{
 		record.open("record.txt",ios::app);
-		record<<"tds value : "<<setw(20)<<tds<<"\t,Quality of Water : "<<quality(tds)<<'\n';
+		record << "tds value : " << setw(20) << tds << "\t,Quality of Water : " << quality(tds) << '\n';
 		record.close();
 }
-string quality(float tds){
-	if(tds<=300)			
-	return "Excellent";
-	else if(tds<=600)
-	return "Good";
+string quality(float tds)
+{
+	if (tds<=300)			
+		return "Excellent";
+	else if (tds<=600)
+		return "Good";
 	else if(tds<=900)
 	return "Fair";
 	else if(tds<=1200)
