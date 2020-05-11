@@ -74,31 +74,35 @@ void run()
 	float amount_Dish_filt;
 	float amount_Dish_only;
      enter:
-		system("cls");
+	system("cls");
 	cout << "\n\t\t\tEnter Amount of the Dish and Filtrate: ";
 	cin >> amount_Dish_filt;
 	fflush(stdin);
 	cout << "\n\t\t\tEnter the Weight of the Dish on its own.: ";
 	cin >> amount_Dish_only;
-	if (amount_Dish_filt<amount_Dish_only){
-	cout<<"\n\t\t\tAmount Dish Filtrate lessthan Amount of Dish.\n\t\t\t wrong value enterd! : ";
+	if (amount_Dish_filt<amount_Dish_only)
+	{
+		cout << "\n\t\t\tAmount Dish Filtrate lessthan Amount of Dish.\n\t\t\t wrong value enterd! : ";
 		getch();
 		system("cls");
 		goto enter;
 	}
-	float tds=getTDS(amount_Dish_filt,amount_Dish_only);
-	cout<<"\nTDS value :"<<setw(10)<<tds;
-	cout<<"\nQuality   :"<<setw(20)<<quality(tds)<<"\n";
+	float tds = getTDS(amount_Dish_filt,amount_Dish_only);
+	cout << "\nTDS value :" << setw(10) << tds;
+	cout << "\nQuality   :" << setw(20) << quality(tds) << "\n";
 	setData(tds);
 	
-return;
+	return;
 }
-float getTDS(float P,float Q){
-float tds = (P-Q)*1000;
-//		he TDS of your solution: TDS=[(A-B) * 1000]/mL
-return tds;
+
+float getTDS(float P, float Q)
+{
+	float tds = (P-Q)*1000;
+	//		he TDS of your solution: TDS=[(A-B) * 1000]/mL
+	return tds;
 }
-void readRecoade(){
+void readRecoade()
+{
 	record.open("record.txt",ios::in);
 	string line;
 	cout<<'\n';
