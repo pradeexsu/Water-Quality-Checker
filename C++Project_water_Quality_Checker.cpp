@@ -124,9 +124,9 @@ string quality(float tds)
 		return "Excellent";
 	else if (tds<=600)
 		return "Good";
-	else if(tds<=900)
-	return "Fair";
-	else if(tds<=1200)
+	else if (tds<=900)
+		return "Fair";
+	else if (tds<=1200)
 	return "Poor";
 	else if(tds>1200)
 	return "Very Bad";
