@@ -52,19 +52,19 @@ void getScreen()
 			system("cls");
 			goto screen;	
 	}
-	cout<<"\t\t\tpress any key to get menu bar ";
+	cout << "\t\t\tpress any key to get menu bar ";
 	getch();
 	system("cls");
 	goto screen;	
 }
 void welcome()
 {
-	string s[]={"WELCOME TO ", "Pradeep\'s PROJECT ", "Let\'s check WATER QUALITY "};
+	string s[] = {"WELCOME TO ", "Pradeep\'s PROJECT ", "Let\'s check WATER QUALITY "};
 	system("color 1");
-	for(int k=0; k<3; k++)
+	for (int k=0; k<3; k++)
 	{
-		cout<<"\n\n\n\n\n"<<"\t\t\t\t\t"<<s[k];
-		for(long v=0;v!=9e8;v++);
+		cout << "\n\n\n\n\n" << space << s[k];
+		for (long v=0; v!=9e8; v++);
 		system("cls");
 	}	
 }
@@ -73,7 +73,7 @@ void run()
 {
 	float amount_Dish_filt;
 	float amount_Dish_only;
-	enter:
+     enter:
 		system("cls");
 	cout << "\n\t\t\tEnter Amount of the Dish and Filtrate: ";
 	cin >> amount_Dish_filt;
