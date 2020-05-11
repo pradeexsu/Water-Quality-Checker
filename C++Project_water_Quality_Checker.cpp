@@ -57,6 +57,7 @@ void getScreen()
 	system("cls");
 	goto screen;	
 }
+
 void welcome()
 {
 	string s[] = {"WELCOME TO ", "Pradeep\'s PROJECT ", "Let\'s check WATER QUALITY "};
@@ -91,7 +92,6 @@ void run()
 	cout << "\nTDS value :" << setw(10) << tds;
 	cout << "\nQuality   :" << setw(20) << quality(tds) << "\n";
 	setData(tds);
-	
 	return;
 }
 
@@ -101,6 +101,7 @@ float getTDS(float P, float Q)
 	// he TDS of your solution: TDS=[(A-B) * 1000]/mL
 	return tds;
 }
+
 void readRecoade()
 {
 	record.open("record.txt",ios::in);
@@ -112,12 +113,14 @@ void readRecoade()
     	}
     	record.close();
 }
+
 void setData(float tds)
 {
 		record.open("record.txt",ios::app);
 		record << "tds value : " << setw(20) << tds << "\t,Quality of Water : " << quality(tds) << '\n';
 		record.close();
 }
+
 string quality(float tds)
 {
 	if (tds<=300)			
@@ -127,11 +130,9 @@ string quality(float tds)
 	else if (tds<=900)
 		return "Fair";
 	else if (tds<=1200)
-	return "Poor";
-	else if(tds>1200)
-	return "Very Bad";
-
-return "Invalid Case";
+		return "Poor";
+	else
+		return "Very Bad";
 }
 
 
