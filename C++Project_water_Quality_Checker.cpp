@@ -32,13 +32,13 @@ void getScreen()
 {
 	welcome();
 	char choice;
-	screen:
+    screen:
 	cout<<"\n\n\n\n\n";	
 	cout<<space<<"1. Check qulity of Water.\n";
 	cout<<space<<"2. Show Recoade.\n";
 	cout<<space<<"3. Exit.\n\n";
 	cout<<space<<"Select ";
-	choice=getch();
+	choice = getch();
 	switch(choice)
 	{
 		case '1':
@@ -50,8 +50,8 @@ void getScreen()
 		case '3':
 			exit(1);
 		default:
-		system("cls");
-		goto screen;	
+			system("cls");
+			goto screen;	
 	}
 	cout<<"\t\t\tpress any key to get menu bar ";
 	getch();
