@@ -1,6 +1,5 @@
-/*
-		name :pradeep suthar
-*/
+
+//		name :pradeep suthar
 #include <fstream>
 #include <iomanip>
 #include<iostream>
@@ -57,28 +56,31 @@ void getScreen()
 	getch();
 	system("cls");
 	goto screen;	
-	}
-void welcome(){
-	string s[]={"WELCOME TO ","GANGULY\'S PROJECT ","Let\'s check WATER QUALITY "};
+}
+void welcome()
+{
+	string s[]={"WELCOME TO ", "Pradeep\'s PROJECT ", "Let\'s check WATER QUALITY "};
 	system("color 1");
-	for(int k=0;k<3;k++)
-	{	
-	cout<<"\n\n\n\n\n"<<"\t\t\t\t\t"<<s[k];
-	for(long v=0;v!=9e8;v++);
-	system("cls");
+	for(int k=0; k<3; k++)
+	{
+		cout<<"\n\n\n\n\n"<<"\t\t\t\t\t"<<s[k];
+		for(long v=0;v!=9e8;v++);
+		system("cls");
 	}	
 }
-void run(){
+
+void run()
+{
 	float amount_Dish_filt;
 	float amount_Dish_only;
 	enter:
 		system("cls");
-	cout<<"\n\t\t\tEnter Amount of the Dish and Filtrate: ";
-	cin>>amount_Dish_filt;
+	cout << "\n\t\t\tEnter Amount of the Dish and Filtrate: ";
+	cin >> amount_Dish_filt;
 	fflush(stdin);
-	cout<<"\n\t\t\tEnter the Weight of the Dish on its own.: ";
-	cin>>amount_Dish_only;
-	if(amount_Dish_filt<amount_Dish_only){
+	cout << "\n\t\t\tEnter the Weight of the Dish on its own.: ";
+	cin >> amount_Dish_only;
+	if (amount_Dish_filt<amount_Dish_only){
 	cout<<"\n\t\t\tAmount Dish Filtrate lessthan Amount of Dish.\n\t\t\t wrong value enterd! : ";
 		getch();
 		system("cls");
