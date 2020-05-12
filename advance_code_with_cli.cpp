@@ -100,14 +100,14 @@ void getBox()
 	gotoxy(20,0);
 }	
 
-void supportingInfo(){
+void supportingInfo()
+{
 	system("cls");
-			 cout<<'\n'<<setw(10)<<""<<"TDS level as follows: excellent, less than 300 mg/liter. \n";
-	    	 cout<<setw(10)<<""<<"The minimum TDS based on some studies should be at least close to 30 ppm\n";
-			 cout<<setw(10)<<""<<"-keeps the mineral levels in check. The Bureau of Indian Standards (BIS)\n";
-			 cout<<setw(10)<<""<<"fixes the upper limit of TDS in drinking water at 500 ppm.\n";
-			
-						char side=179,hr=196,u=218,l=192,uo=191,lo=217;	
+	cout<<'\n'<<setw(10)<<""<<"TDS level as follows: excellent, less than 300 mg/liter. \n";
+	cout<<setw(10)<<""<<"The minimum TDS based on some studies should be at least close to 30 ppm\n";
+	cout<<setw(10)<<""<<"-keeps the mineral levels in check. The Bureau of Indian Standards (BIS)\n";
+	cout<<setw(10)<<""<<"fixes the upper limit of TDS in drinking water at 500 ppm.\n";
+	char side=179,hr=196,u=218,l=192,uo=191,lo=217;	
 	gotoxy(20,1);
 	cout<<u<<setfill(hr)<<setw(30)<<""<<(char)194<<setw(29)<<""<<uo<<'\n';
 	gotoxy(20,0);
@@ -131,48 +131,54 @@ void supportingInfo(){
  return;
 }			
 
-void aboutTDS(){
-			cout<<setw(20)<<""<<"TDS of your solution: TDS=[(A-B) * 1000]/mL\n"<<
-			setw(20)<<""<<"A stands for the weight of the evaporating dish + filtrate\n"<<
-			setw(20)<<""<<"B stands for the weight of the evaporating dish on its own.\n\n";
-			}
-
-void gotoxy(int x,int y){
-	for(int i=0;i<y;i++)
-	cout<<"\n";
-	for(int i=0;i<x;i++)
-	cout<<" ";
-	return;
-	}
-	
-void welcome(string s[]){	
-		system("color 9");
-					gotoxy(40,10);
-			cout<<"Loading   ";	
-			for(int j=0;j<30;j++)	
-			{
-			cout<<(char)219;
-			for(long i=0;i<35000000;i++);
-			}
-			gotoxy(40,1);			
-		system("color b");
-			cout<<"Loadding Completed 100 % ";
-				for(int k=0;k<2;k++){
-					gotoxy(40,10);
-					cout<<s[k];
-					for(long v=0;v!=900000000;v++);
-					system("cls");
-					system("color 9");
-						}
+void aboutTDS()
+{
+	cout<<setw(20)<<""<<"TDS of your solution: TDS=[(A-B) * 1000]/mL\n"<<
+	setw(20)<<""<<"A stands for the weight of the evaporating dish + filtrate\n"<<
+	setw(20)<<""<<"B stands for the weight of the evaporating dish on its own.\n\n";
 }
 
-//									<--	  protject FUNCTIONS   -->
+void gotoxy(int x,int y)
+{
+	for(int i=0;i<y;i++)
+		cout<<"\n";
+	for(int i=0;i<x;i++)
+		cout<<" ";
+	return;
+}
+	
+void welcome(string s[])
+{
+	system("color 9");
+	gotoxy(40,10);
+	cout<<"Loading   ";	
+	for(int j=0;j<30;j++)	
+	{
+		cout<<(char)219;
+		for(long i=0;i<35000000;i++);
+	}
+	gotoxy(40,1);			
+	system("color b");
+	cout<<"Loadding Completed 100 % ";
+	for(int k=0;k<2;k++)
+	{
+		gotoxy(40,10);
+		cout<<s[k];
+		for(long v=0;v!=900000000;v++);
+		
+		system("cls");
+		system("color 9");
+	}
+}
 
-void input(){
+//						<--	  protject FUNCTIONS   -->
+
+void input()
+{
 	float weight_Of_Evaporating_Dish_and_Filtrate;
 	float weight_Of_Evaporating_Dish_on_its_own;
-	_do:
-		system("cls");
+    _do:
+	system("cls");
 	gotoxy(20,5);
 	cout<<"Enter Weight of the Evaporating Dish + Filtrate. ( mg/L ) : ";
 	cin>>weight_Of_Evaporating_Dish_and_Filtrate;
@@ -183,77 +189,79 @@ void input(){
 	float &x=weight_Of_Evaporating_Dish_and_Filtrate;
 	float &y=weight_Of_Evaporating_Dish_on_its_own;
 	
-	if(x<y){
-	gotoxy(20,1);		
-	cout<<""<<"Weight of the Evaporating Dish + Filtrate Must be greater\n"<<setw(20)<<""<<
-	     "than that the Weight of the Evaporating Dish on its own.\n";
+	if(x<y)
+	{
+		gotoxy(20,1);		
+		cout<<""<<"Weight of the Evaporating Dish + Filtrate Must be greater\n"<<setw(20)<<""<<
+	     		"than that the Weight of the Evaporating Dish on its own.\n";
 		cout<<setw(20)<<""<<"press any key to Reenter values\n";
 		getch();
 		goto _do;
-			system("color 3");
+		system("color 3");
 	}
 	
-		gotoxy(20,1);
+	gotoxy(20,1);
 	cout<<""<<"TDS value for given sample is "<<setw(10)<<
-	 getTDS(x,y)
-			<<setw(20)<<getQuality(getTDS(x,y))<<"\n";
+		getTDS(x,y) <<setw(20)<<getQuality(getTDS(x,y))<<"\n";
 	setData(getTDS(x,y));
-return;
+	return;
 }
 
-float getTDS(float A,float B){
-return (A-B)*1000;
+float getTDS(float A,float B)
+{
+	return (A-B)*1000;
 }
 
-void readPreviusRecoade(){
+void readPreviusRecoade()
+{
 	system("cls");
 	file.open("info.txt",ios::in);
 	//cout<<"\n"<<setw(25)<<"date_time"<<"|"<<setw(20)<<"data"<<"|";
 	system("color d");
 	string line;
 	while ( getline(file,line) )
-    {
-      cout << line <<'\n';
-    }
-    file.close();
+    	{
+      		cout << line <<'\n';
+    	}
+ 	file.close();
 }
 
-void setData(float TDS){
+void setData(float TDS)
+{
 
 	file.open("info.txt",ios::app);
 	string date_time;
 
 	date_time=get_cur_time();
 
-			//info.insert(pair<string,int>(date_time,data));
-			//		file<<setw(30)<<"Date & Time Of Recoded "<<"|"<<setw(20)<<"Recoded TDS(mg/L)"
-			//		<<"|"<<setw(25)<<"Quality"<<"|";
-
-		file<<"\n"<<setw(30)<<date_time<<" "<<setw(20)<<TDS<<" "<<setw(25)
-		<<getQuality(TDS)<<"|";
-		file.close();
-
-
+	//info.insert(pair<string,int>(date_time,data));
+	//		file<<setw(30)<<"Date & Time Of Recoded "<<"|"<<setw(20)<<"Recoded TDS(mg/L)"
+	//		<<"|"<<setw(25)<<"Quality"<<"|";
+	file<<"\n"<<setw(30)<<date_time<<" "<<setw(20)<<TDS<<" "<<setw(25)<<getQuality(TDS)<<"|";
+	
+	file.close();
 }
 
-string getQuality(float TDS){
+string getQuality(float TDS)
+{
 	if(TDS<=300)			//  miligram per liter
-	return "Excellent";
+		return "Excellent";
 	else if(TDS<=600)
-	return "Good";
+		return "Good";
 	else if(TDS<=900)
-	return "Fair";
+		return "Fair";
 	else if(TDS<=1200)
-	return "Poor";
+		return "Poor";
 	else if(TDS>1200)
-	return "Unacceptable";
+		return "Unacceptable";
 
 }
 
 // 	   									for	time function...
 
-char itoc(int i){
-	return '0'+i
+char itoc(int i)
+{
+	return '0'+i;
 /*
 	{
 		if(i==0)
@@ -280,17 +288,21 @@ char itoc(int i){
 */
 }
 
-string itos(long l){
+string itos(long l)
+{
 	string s="";
-		for(int i=0;l!=0;i++)
-		{
+	for(int i=0;l!=0;i++)
+	{
 		s=itoc(l%10)+s;
 		l/=10;
-		}
-		return s;
+	}
+	return s;
 }
-	time_t now=time(NULL);			// get time from  os;
-string get_cur_time(){
+
+time_t now=time(NULL);			// get time from  os;
+
+string get_cur_time()
+{
 	struct tm nowlocal;
 	nowlocal =*localtime(&now);
 	string date_time;
