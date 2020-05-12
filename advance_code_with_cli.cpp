@@ -25,7 +25,6 @@ void supportingInfo();
 void setData(float data);
 float getTDS(float x,float y);
 string getQuality(float TDS);
-	
 fstream file;
 						//   main function..
 int main()
@@ -74,17 +73,18 @@ void getscreen(char &x)
 	getscreen(x);
 }
 
-void getBox(){
-	char ul=201,ur=187,m=205,ll=200,lr=188,vm=186;
-	cout<<setfill(' ')<<setw(20)<<""<<ul<<setfill(m)<<setw(42)<<""<<ur<<"\n";
-	cout<<setfill(' ')<<setw(20)<<""<<vm<<" WATER QUALITY CHECKER FROM TDS METHOD    "<<vm<<'\n';	
-	cout<<setfill(' ')<<setw(20)<<""<<ll<<setfill(m)<<setw(42)<<""<<lr;
-	cout<<setfill(' ');
-		char side=179,hr=196,u=218,l=192,uo=191,lo=217;	
+void getBox()
+{
+	char ul=201, ur=187, m=205, ll=200, lr=188, vm=186;
+	cout << setfill(' ') << setw(20) << "" << ul << setfill(m) << setw(42) << "" << ur << "\n";
+	cout << setfill(' ') << setw(20) << "" << vm << " WATER QUALITY CHECKER FROM TDS METHOD    " << vm << '\n';	
+	cout << setfill(' ') << setw(20) << "" << ll << setfill(m) << setw(42) << "" << lr;
+	cout << setfill(' ');
+	char side=179, hr=196, u=218, l=192, uo=191, lo=217;	
 	gotoxy(20,2);
-	cout<<u<<setfill(hr)<<setw(60)<<""<<uo<<'\n';
+	cout << u << setfill(hr) << setw(60) << "" << uo << '\n';
 	gotoxy(20,0);
-	cout<<side<<setfill(' ')<<setw(60)<<left<<"  1. Check qulity of Water (TDS) from sample( Add info )."<<side;
+	cout << side << setfill(' ') << setw(60) << left << "  1. Check qulity of Water (TDS) from sample( Add info )." << side;
 	gotoxy(20,1);
 	cout<<side<<setfill(' ')<<setw(60)<<left<<"  2. Show Previus Recoade (Date and time wise)."<<side;
 	gotoxy(20,1);
