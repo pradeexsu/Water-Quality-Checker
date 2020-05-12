@@ -86,17 +86,17 @@ void getBox()
 	gotoxy(20,0);
 	cout << side << setfill(' ') << setw(60) << left << "  1. Check qulity of Water (TDS) from sample( Add info )." << side;
 	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(60)<<left<<"  2. Show Previus Recoade (Date and time wise)."<<side;
+	cout << side << setfill(' ') << setw(60) << left << "  2. Show Previus Recoade (Date and time wise)." << side;
 	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(60)<<left<<"  3. Get Suporting Information."<<side;
+	cout << side << setfill(' ') << setw(60) << left << "  3. Get Suporting Information." << side;
 	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(60)<<left<<"  4. Know about TDS."<<side;
+	cout << side << setfill(' ') << setw(60) << left << "  4. Know about TDS." << side;
 	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(60)<<left<<"  5. Exit."<<side;
+	cout << side << setfill(' ') << setw(60) << left << "  5. Exit." << side;
 	gotoxy(20,1);
 
-	cout<<l<<setfill(hr)<<setw(60)<<""<<lo;
-	cout<<setfill(' ')<<'\n';
+	cout << l << setfill(hr) << setw(60) << "" << lo;
+	cout << setfill(' ') << '\n';
 	gotoxy(20,0);
 }	
 
