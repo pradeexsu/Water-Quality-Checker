@@ -1,8 +1,8 @@
 #include <fstream>
 #include <iomanip>
 #include <ctime>
-#include<iostream>
-#include<conio.h>
+#include <iostream>
+#include <conio.h>
 using namespace std;
 
 //					       display Function 
@@ -142,9 +142,9 @@ void aboutTDS()
 
 void gotoxy(int x,int y)
 {
-	for(int i=0;i<y;i++)
+	for (int i=0; i<y; i++)
 		cout<<"\n";
-	for(int i=0;i<x;i++)
+	for (int i=0; i<x; i++)
 		cout<<" ";
 	return;
 }
@@ -154,7 +154,7 @@ void welcome(string s[])
 	system("color 9");
 	gotoxy(40,10);
 	cout<<"Loading   ";	
-	for(int j=0;j<30;j++)	
+	for (int j=0; j<30; j++)	
 	{
 		cout<<(char)219;
 		for(long i=0;i<35000000;i++);
@@ -162,7 +162,7 @@ void welcome(string s[])
 	gotoxy(40,1);			
 	system("color b");
 	cout<<"Loadding Completed 100 % ";
-	for(int k=0;k<2;k++)
+	for (int k=0; k<2; k++)
 	{
 		gotoxy(40,10);
 		cout<<s[k];
@@ -246,20 +246,20 @@ void setData(float TDS)
 
 string getQuality(float TDS)
 {
-	if(TDS<=300)			//  miligram per liter
+	if (TDS<=300)			//  miligram per liter
 		return "Excellent";
-	else if(TDS<=600)
+	else if (TDS<=600)
 		return "Good";
-	else if(TDS<=900)
+	else if (TDS<=900)
 		return "Fair";
-	else if(TDS<=1200)
+	else if (TDS<=1200)
 		return "Poor";
-	else if(TDS>1200)
+	else if (TDS>1200)
 		return "Unacceptable";
 
 }
 
-// 	   									for	time function...
+// 	   				for	time function...
 
 char itoc(int i)
 {
@@ -293,7 +293,7 @@ char itoc(int i)
 string itos(long l)
 {
 	string s="";
-	for(int i=0;l!=0;i++)
+	for (int i=0; l!=0; i++)
 	{
 		s=itoc(l%10)+s;
 		l/=10;
