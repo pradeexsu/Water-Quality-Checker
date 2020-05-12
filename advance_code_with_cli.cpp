@@ -31,7 +31,7 @@ fstream file;
 						//   main function..
 int main()
 {		
-	string s[]={"welcome to "," Water QualityChecker \n\t\t\t\t\t\t\t\t by A13, GT:G1, Pradeep "};
+	string s[] = {"welcome to "," Water QualityChecker \n\t\t\t\t\t\t\t\t by A13, GT:G1, Pradeep "};
 	char x='1';
 	welcome(s);	
 	do
