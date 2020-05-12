@@ -4,39 +4,40 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
-//							display Function 
-	void welcome(string s[]);
-	void getscreen(char &x);
-	void gotoxy(int x,int y);
-	void getBox();
-//					Declaration of function
-	string get_cur_time();
-	string itos(long l);
-	char itoc(int i);
+//					       display Function 
+void welcome(string s[]);
+void getscreen(char &x);
+void gotoxy(int x,int y);
+void getBox();
+//					       Declaration of function
+string get_cur_time();
+string itos(long l);
+char itoc(int i);
 	
 //						main menu function	
 	
-	void aboutTDS();
-	void readPreviusRecoade();
-	void input(void);
-	void supportingInfo();
+void aboutTDS();
+void readPreviusRecoade();
+void input(void);
+void supportingInfo();
 	
 //						TDS Function
-	void setData(float data);
-	float getTDS(float x,float y);
-	string getQuality(float TDS);
+void setData(float data);
+float getTDS(float x,float y);
+string getQuality(float TDS);
 	
-	fstream file;
+fstream file;
 						//   main function..
-	int main(){
-		
+int main()
+{		
 	string s[]={"welcome to "," Water QualityChecker \n\t\t\t\t\t\t\t\t by A13, GT:G1, Pradeep "};
 	char x='1';
 	welcome(s);	
-	do{	
-	getscreen(x);
-	}while(true);
-	}
+	do
+	{	
+		getscreen(x);
+	} while(true);
+}
 //						<--	  display FUNCTIONS   -->
 
 void getscreen(char &x){
