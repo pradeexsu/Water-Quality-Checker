@@ -1,9 +1,9 @@
-	#include <fstream>
-	#include <iomanip>
-	#include <ctime>
-	#include<iostream>
-	#include<conio.h>
-	using namespace std;
+#include <fstream>
+#include <iomanip>
+#include <ctime>
+#include<iostream>
+#include<conio.h>
+using namespace std;
 //							display Function 
 	void welcome(string s[]);
 	void getscreen(char &x);
