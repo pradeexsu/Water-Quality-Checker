@@ -40,13 +40,15 @@ int main()
 }
 //						<--	  display FUNCTIONS   -->
 
-void getscreen(char &x){
-	up:
+void getscreen(char &x)
+{
+     up:
 	getBox();
-	cout<<"Select any of above :  ";
-	x=getch();
+	cout << "Select any of above :  ";
+	x = getch();
 	gotoxy(0,2);
-	switch(x){
+	switch(x)
+	{
 		case '1':
 			input();
 			break;
@@ -65,12 +67,12 @@ void getscreen(char &x){
 		system("cls");	
 		goto up;	
 	}
-	cout<<'\n'<<setw(20)<<""<<"press any key to get menu bar \n";
+	cout << '\n' << setw(20) << "" << "press any key to get menu bar \n";
 	getch();
 	system("color 9");
 	system("cls");
-	 getscreen(x);
-	}
+	getscreen(x);
+}
 
 void getBox(){
 	char ul=201,ur=187,m=205,ll=200,lr=188,vm=186;
