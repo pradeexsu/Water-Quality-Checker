@@ -10,6 +10,7 @@ void welcome(string s[]);
 void getscreen(char &x);
 void gotoxy(int x,int y);
 void getBox();
+
 //					       Declaration of function
 string get_cur_time();
 string itos(long l);
