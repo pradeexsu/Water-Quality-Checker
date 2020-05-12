@@ -4,6 +4,7 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
+
 //					       display Function 
 void welcome(string s[]);
 void getscreen(char &x);
