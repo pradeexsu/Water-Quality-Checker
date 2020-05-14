@@ -3,6 +3,7 @@
 #include <ctime>
 #include <iostream>
 #include <conio.h>
+
 using namespace std;
 
 //					       display Function 
@@ -105,13 +106,13 @@ void getBox()
 void supportingInfo()
 {
 	system("cls");
-	cout<<'\n'<<setw(10)<<""<<"TDS level as follows: excellent, less than 300 mg/liter. \n";
-	cout<<setw(10)<<""<<"The minimum TDS based on some studies should be at least close to 30 ppm\n";
-	cout<<setw(10)<<""<<"-keeps the mineral levels in check. The Bureau of Indian Standards (BIS)\n";
-	cout<<setw(10)<<""<<"fixes the upper limit of TDS in drinking water at 500 ppm.\n";
-	char side=179,hr=196,u=218,l=192,uo=191,lo=217;	
-	gotoxy(20,1);
-	cout<<u<<setfill(hr)<<setw(30)<<""<<(char)194<<setw(29)<<""<<uo<<'\n';
+	cout << '\n' << setw(10) << "" << "TDS level as follows: excellent, less than 300 mg/liter. \n";
+	cout << setw(10) << "" << "The minimum TDS based on some studies should be at least close to 30 ppm\n";
+	cout << setw(10) << "" << "-keeps the mineral levels in check. The Bureau of Indian Standards (BIS)\n";
+	cout << setw(10) << "" << "fixes the upper limit of TDS in drinking water at 500 ppm.\n";
+	char side=179, hr=196, u=218, l=192, uo=191, lo=217;	
+	gotoxy(20, 1);
+	cout << u << setfill(hr) << setw(30) << "" << (char)194 << setw(29) << "" << uo << '\n';
 	gotoxy(20,0);
 	cout<<side<<setfill(' ')<<setw(30)<<left<<" TDS Level (Miligram/Litter)"<<side<<setw(29)<<" Palatability of Water "<<side;
 	gotoxy(20,1);
