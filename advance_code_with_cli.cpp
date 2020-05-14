@@ -48,7 +48,7 @@ void getscreen(char &x)
 	cout << "Select any of above :  ";
 	x = getch();
 	gotoxy(0,2);
-	switch(x)
+	switch (x)
 	{
 		case '1':
 			input();
