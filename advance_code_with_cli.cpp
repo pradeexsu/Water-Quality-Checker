@@ -100,7 +100,7 @@ void getBox()
 
 	cout << l << setfill(hr) << setw(60) << "" << lo;
 	cout << setfill(' ') << '\n';
-	gotoxy(20,0);
+	gotoxy(20, 0);
 }	
 
 void supportingInfo()
@@ -113,15 +113,15 @@ void supportingInfo()
 	char side=179, hr=196, u=218, l=192, uo=191, lo=217;	
 	gotoxy(20, 1);
 	cout << u << setfill(hr) << setw(30) << "" << (char)194 << setw(29) << "" << uo << '\n';
-	gotoxy(20,0);
-	cout<<side<<setfill(' ')<<setw(30)<<left<<" TDS Level (Miligram/Litter)"<<side<<setw(29)<<" Palatability of Water "<<side;
-	gotoxy(20,1);
-	cout<<(char)195<<setfill(hr)<<setw(30)<<""<<(char)197<<setw(29)<<""<<(char)180;
-	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(30)<<left<<" Less than 300 "<<side<<setw(29)<<left<<" Excellent"<<side;
-	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(30)<<left<<" 300 - 600 "<<side<<setw(29)<<left<<" Good "<<side;
-	gotoxy(20,1);
+	gotoxy(20, 0);
+	cout << side << setfill(' ') << setw(30) << left << " TDS Level (Miligram/Litter)" << side << setw(29) << " Palatability of Water " << side;
+	gotoxy(20, 1);
+	cout << (char)195 << setfill(hr) << setw(30) << "" << (char)197 << setw(29) << "" << (char)180;
+	gotoxy(20, 1);
+	cout << side << setfill(' ') << setw(30) << left << " Less than 300 " << side << setw(29) << left << " Excellent" << side;
+	gotoxy(20, 1);
+	cout << side << setfill(' ') << setw(30) << left << " 300 - 600 " << side << setw(29) << left << " Good "<< side;
+	gotoxy(20, 1);
 	cout<<side<<setfill(' ')<<setw(30)<<left<<" 600 - 900 "<<side<<setw(29)<<left<<" Fair "<<side;
 	gotoxy(20,1);
 	cout<<side<<setfill(' ')<<setw(30)<<left<<" 900 - 1200 "<<side<<setw(29)<<left<<" Poor "<<side;
