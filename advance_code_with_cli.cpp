@@ -294,16 +294,16 @@ char itoc(int i)
 
 string itos(long l)
 {
-	string s="";
+	string s = "";
 	for (int i=0; l!=0; i++)
 	{
-		s=itoc(l%10)+s;
-		l/=10;
+		s = itoc(l%10)+s;
+		l /= 10;
 	}
 	return s;
 }
 
-time_t now=time(NULL);			// get time from  os;
+time_t now = time(NULL);			// get time from  os;
 
 string get_cur_time()
 {
