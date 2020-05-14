@@ -136,9 +136,9 @@ void supportingInfo()
 
 void aboutTDS()
 {
-	cout<<setw(20)<<""<<"TDS of your solution: TDS=[(A-B) * 1000]/mL\n"<<
-	setw(20)<<""<<"A stands for the weight of the evaporating dish + filtrate\n"<<
-	setw(20)<<""<<"B stands for the weight of the evaporating dish on its own.\n\n";
+	cout << setw(20) << "" << "TDS of your solution: TDS=[(A-B) * 1000]/mL\n" <<
+	setw(20) << "" << "A stands for the weight of the evaporating dish + filtrate\n" <<
+	setw(20) << "" << "B stands for the weight of the evaporating dish on its own.\n\n";
 }
 
 void gotoxy(int x,int y)
@@ -222,6 +222,7 @@ void readPreviusRecoade()
 	//cout<<"\n"<<setw(25)<<"date_time"<<"|"<<setw(20)<<"data"<<"|";
 	system("color d");
 	string line;
+	
 	while ( getline(file,line) )
     	{
       		cout << line <<'\n';
