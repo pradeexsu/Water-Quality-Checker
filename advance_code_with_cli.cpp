@@ -122,16 +122,16 @@ void supportingInfo()
 	gotoxy(20, 1);
 	cout << side << setfill(' ') << setw(30) << left << " 300 - 600 " << side << setw(29) << left << " Good "<< side;
 	gotoxy(20, 1);
-	cout<<side<<setfill(' ')<<setw(30)<<left<<" 600 - 900 "<<side<<setw(29)<<left<<" Fair "<<side;
-	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(30)<<left<<" 900 - 1200 "<<side<<setw(29)<<left<<" Poor "<<side;
-	gotoxy(20,1);
-	cout<<side<<setfill(' ')<<setw(30)<<left<<" Above 1200 "<<side<<setw(29)<<left<<" Unacceptable "<<side;
-	gotoxy(20,1);
-	cout<<l<<setfill(hr)<<setw(30)<<""<<(char)193<<setw(29)<<""<<lo;
-	cout<<setfill(' ')<<'\n';
-	gotoxy(20,0); 
- return;
+	cout << side << setfill(' ') << setw(30) << left << " 600 - 900 " << side << setw(29) << left << " Fair " << side;
+	gotoxy(20, 1);
+	cout << side << setfill(' ') << setw(30) << left << " 900 - 1200 " << side << setw(29) << left << " Poor " << side;
+	gotoxy(20, 1);
+	cout << side << setfill(' ') << setw(30) << left << " Above 1200 " << side << setw(29) << left << " Unacceptable " << side;
+	gotoxy(20, 1);
+	cout << l << setfill(hr) << setw(30) << "" << (char)193 << setw(29) << "" << lo;
+	cout << setfill(' ') << '\n';
+	gotoxy(20, 0); 
+ 	return;
 }			
 
 void aboutTDS()
