@@ -192,25 +192,25 @@ void input()
 	float &x=weight_Of_Evaporating_Dish_and_Filtrate;
 	float &y=weight_Of_Evaporating_Dish_on_its_own;
 	
-	if(x<y)
+	if (x<y)
 	{
-		gotoxy(20,1);		
-		cout<<""<<"Weight of the Evaporating Dish + Filtrate Must be greater\n"<<setw(20)<<""<<
+		gotoxy(20, 1);		
+		cout << "" << "Weight of the Evaporating Dish + Filtrate Must be greater\n" << setw(20) << "" <<
 	     		"than that the Weight of the Evaporating Dish on its own.\n";
-		cout<<setw(20)<<""<<"press any key to Reenter values\n";
+		cout << setw(20) << "" << "press any key to Reenter values\n";
 		getch();
 		goto _do;
 		system("color 3");
 	}
 	
-	gotoxy(20,1);
-	cout<<""<<"TDS value for given sample is "<<setw(10)<<
-		getTDS(x,y) <<setw(20)<<getQuality(getTDS(x,y))<<"\n";
-	setData(getTDS(x,y));
+	gotoxy(20, 1);
+	cout << "" << "TDS value for given sample is " << setw(10) <<
+		getTDS(x, y) << setw(20) << getQuality(getTDS(x, y)) << "\n";
+	setData(getTDS(x, y));
 	return;
 }
 
-float getTDS(float A,float B)
+float getTDS(float A, float B)
 {
 	return (A-B)*1000;
 }
@@ -218,8 +218,8 @@ float getTDS(float A,float B)
 void readPreviusRecoade()
 {
 	system("cls");
-	file.open("info.txt",ios::in);
-	//cout<<"\n"<<setw(25)<<"date_time"<<"|"<<setw(20)<<"data"<<"|";
+	file.open("info.txt", ios::in);
+	//cout << "\n" << setw(25) << "date_time" << "|" << setw(20) << "data" << "|" ;
 	system("color d");
 	string line;
 	
@@ -233,15 +233,15 @@ void readPreviusRecoade()
 void setData(float TDS)
 {
 
-	file.open("info.txt",ios::app);
+	file.open("info.txt", ios::app);
 	string date_time;
 
 	date_time=get_cur_time();
 
-	//info.insert(pair<string,int>(date_time,data));
-	//		file<<setw(30)<<"Date & Time Of Recoded "<<"|"<<setw(20)<<"Recoded TDS(mg/L)"
-	//		<<"|"<<setw(25)<<"Quality"<<"|";
-	file<<"\n"<<setw(30)<<date_time<<" "<<setw(20)<<TDS<<" "<<setw(25)<<getQuality(TDS)<<"|";
+	//info.insert(pair<string, int>(date_time, data));
+	//		file << setw(30) << "Date & Time Of Recoded " << "|" << setw(20) << "Recoded TDS(mg/L)"
+	//		<< "|" << setw(25) << "Quality" << "|";
+	file << "\n" << setw(30) << date_time << " " << setw(20) << TDS << " " << setw(25) << getQuality(TDS) << "|";
 	
 	file.close();
 }
