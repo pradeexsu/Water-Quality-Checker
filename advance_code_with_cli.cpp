@@ -187,10 +187,10 @@ void input()
 	cin>>weight_Of_Evaporating_Dish_and_Filtrate;
 	fflush(stdin);
 	gotoxy(20,0);
-	cout<<"Enter the Weight of the Evaporating Dish on its own. ( mg/L ) : ";
-	cin>>weight_Of_Evaporating_Dish_on_its_own;
-	float &x=weight_Of_Evaporating_Dish_and_Filtrate;
-	float &y=weight_Of_Evaporating_Dish_on_its_own;
+	cout << "Enter the Weight of the Evaporating Dish on its own. ( mg/L ) : ";
+	cin >> weight_Of_Evaporating_Dish_on_its_own;
+	float &x = weight_Of_Evaporating_Dish_and_Filtrate;
+	float &y = weight_Of_Evaporating_Dish_on_its_own;
 	
 	if (x<y)
 	{
@@ -223,7 +223,7 @@ void readPreviusRecoade()
 	system("color d");
 	string line;
 	
-	while ( getline(file,line) )
+	while ( getline(file, line) )
     	{
       		cout << line <<'\n';
     	}
@@ -236,7 +236,7 @@ void setData(float TDS)
 	file.open("info.txt", ios::app);
 	string date_time;
 
-	date_time=get_cur_time();
+	date_time = get_cur_time();
 
 	//info.insert(pair<string, int>(date_time, data));
 	//		file << setw(30) << "Date & Time Of Recoded " << "|" << setw(20) << "Recoded TDS(mg/L)"
@@ -266,6 +266,7 @@ string getQuality(float TDS)
 char itoc(int i)
 {
 	return '0'+i;
+}
 /*
 	{
 		if(i==0)
@@ -290,7 +291,6 @@ char itoc(int i)
 			return '9';
 	}
 */
-}
 
 string itos(long l)
 {
