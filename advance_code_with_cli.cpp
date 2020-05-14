@@ -155,19 +155,21 @@ void welcome(string s[])
 	system("color 9");
 	gotoxy(40,10);
 	cout<<"Loading   ";	
+
 	for (int j=0; j<30; j++)	
 	{
-		cout<<(char)219;
-		for(long i=0;i<35000000;i++);
+		cout << (char)219;
+		for(long i=0; i<35000000; i++);
 	}
-	gotoxy(40,1);			
+	
+	gotoxy(40, 1);			
 	system("color b");
-	cout<<"Loadding Completed 100 % ";
+	cout << "Loadding Completed 100 % ";
 	for (int k=0; k<2; k++)
 	{
-		gotoxy(40,10);
-		cout<<s[k];
-		for(long v=0;v!=900000000;v++);
+		gotoxy(40, 10);
+		cout << s[k];
+		for (long v=0; v!=900000000; v++);
 		
 		system("cls");
 		system("color 9");
@@ -182,11 +184,11 @@ void input()
 	float weight_Of_Evaporating_Dish_on_its_own;
     _do:
 	system("cls");
-	gotoxy(20,5);
-	cout<<"Enter Weight of the Evaporating Dish + Filtrate. ( mg/L ) : ";
-	cin>>weight_Of_Evaporating_Dish_and_Filtrate;
+	gotoxy(20, 5);
+	cout << "Enter Weight of the Evaporating Dish + Filtrate. ( mg/L ) : ";
+	cin >> weight_Of_Evaporating_Dish_and_Filtrate;
 	fflush(stdin);
-	gotoxy(20,0);
+	gotoxy(20, 0);
 	cout << "Enter the Weight of the Evaporating Dish on its own. ( mg/L ) : ";
 	cin >> weight_Of_Evaporating_Dish_on_its_own;
 	float &x = weight_Of_Evaporating_Dish_and_Filtrate;
