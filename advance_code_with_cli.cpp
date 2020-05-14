@@ -9,7 +9,7 @@ using namespace std;
 //					       display Function 
 void welcome(string s[]);
 void getscreen(char &x);
-void gotoxy(int x,int y);
+void gotoxy(int x, int y);
 void getBox();
 
 //					       Declaration of function
@@ -26,7 +26,7 @@ void supportingInfo();
 	
 //						TDS Function
 void setData(float data);
-float getTDS(float x,float y);
+float getTDS(float x, float y);
 string getQuality(float TDS);
 fstream file;
 						//   main function..
@@ -84,19 +84,19 @@ void getBox()
 	cout << setfill(' ') << setw(20) << "" << ll << setfill(m) << setw(42) << "" << lr;
 	cout << setfill(' ');
 	char side=179, hr=196, u=218, l=192, uo=191, lo=217;	
-	gotoxy(20,2);
+	gotoxy(20, 2);
 	cout << u << setfill(hr) << setw(60) << "" << uo << '\n';
-	gotoxy(20,0);
+	gotoxy(20, 0);
 	cout << side << setfill(' ') << setw(60) << left << "  1. Check qulity of Water (TDS) from sample( Add info )." << side;
-	gotoxy(20,1);
+	gotoxy(20, 1);
 	cout << side << setfill(' ') << setw(60) << left << "  2. Show Previus Recoade (Date and time wise)." << side;
-	gotoxy(20,1);
+	gotoxy(20, 1);
 	cout << side << setfill(' ') << setw(60) << left << "  3. Get Suporting Information." << side;
-	gotoxy(20,1);
+	gotoxy(20, 1);
 	cout << side << setfill(' ') << setw(60) << left << "  4. Know about TDS." << side;
-	gotoxy(20,1);
+	gotoxy(20, 1);
 	cout << side << setfill(' ') << setw(60) << left << "  5. Exit." << side;
-	gotoxy(20,1);
+	gotoxy(20, 1);
 
 	cout << l << setfill(hr) << setw(60) << "" << lo;
 	cout << setfill(' ') << '\n';
@@ -141,7 +141,7 @@ void aboutTDS()
 	setw(20) << "" << "B stands for the weight of the evaporating dish on its own.\n\n";
 }
 
-void gotoxy(int x,int y)
+void gotoxy(int x, int y)
 {
 	for (int i=0; i<y; i++)
 		cout << "\n";
@@ -153,13 +153,13 @@ void gotoxy(int x,int y)
 void welcome(string s[])
 {
 	system("color 9");
-	gotoxy(40,10);
+	gotoxy(40, 10);
 	cout<<"Loading   ";	
 
 	for (int j=0; j<30; j++)	
 	{
 		cout << (char)219;
-		for(long i=0; i<35000000; i++);
+		for (long i=0; i<35000000; i++);
 	}
 	
 	gotoxy(40, 1);			
