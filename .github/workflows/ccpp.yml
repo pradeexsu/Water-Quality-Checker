@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: upgread ubuntu
-      run: sudo apt-get upgrade
+#    - name: upgread ubuntu
+#      run: sudo apt-get upgrade
     - name: installing git
       run: sudo apt-get install git
     - name: channging dir to home
@@ -26,9 +26,9 @@ jobs:
     - name: cloneing conio.h repo
       run: git clone https://github.com/zoelabbb/conio.h.git
     - name: changing dir
-      run: cd conio.h
+      run: cd conio.h/
     - name: pasting conio
-      run: sudo cp conio.h /usr/include/ 
+      run: sudo cp -r conio.h /usr/include/ 
     - name: compiling advance_code_with_cli.cpp
       run: g++ advance_code_with_cli.cpp -o a
     - name: compiling C++Project_water_Quality_Checker.cpp
