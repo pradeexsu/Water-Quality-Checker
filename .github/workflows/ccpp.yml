@@ -13,11 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: compiling advance_code_with_cli.cpp
+      run: g++ advance_code_with_cli.cpp -o a
+    - name: compiling C++Project_water_Quality_Checker.cpp
+      run: g++ C++Project_water_Quality_Checker.cpp -o b
