@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install sudo package
+      run: apt update && apt install sudo
     - name: upgread ubuntu
       run: sudo apt-get upgrade
     - name: installing git
