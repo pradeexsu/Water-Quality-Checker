@@ -19,8 +19,10 @@ jobs:
       run: sudo apt-get install git
     - name: channging dir to home
       run: cd
-#    - name: channging dir to desktop
-#      run: cd Desktop
+    - name: createing dir to A
+      run: mkdir A
+    - name: channging dir to A
+      run: cd A/
     - name: cloneing conio.h repo
       run: git clone https://github.com/zoelabbb/conio.h.git
     - name: changing dir
