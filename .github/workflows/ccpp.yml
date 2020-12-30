@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: compiling advance_code_with_cli.cpp
-      run: g++ advance_code_with_cli.cpp -o a
+      run: gcc advance_code_with_cli.cpp -o a
     - name: compiling C++Project_water_Quality_Checker.cpp
-      run: g++ C++Project_water_Quality_Checker.cpp -o b
+      run: gcc C++Project_water_Quality_Checker.cpp -o b
