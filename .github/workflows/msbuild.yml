@@ -31,5 +31,5 @@ jobs:
     - name: display
       run: dir
     - name: run
-      run: a.exe 
+      run: start a.exe 
      
