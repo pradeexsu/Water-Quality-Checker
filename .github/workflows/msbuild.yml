@@ -31,5 +31,5 @@ jobs:
     - name: display
       run: dir
     - name: run
-      run: advance_code_with_cli.exe 
+      run: a.exe 
      
