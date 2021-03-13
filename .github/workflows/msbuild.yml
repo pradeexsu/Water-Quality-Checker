@@ -29,5 +29,5 @@ jobs:
     - name: Compaile
       run: g++ advance_code_with_cli.cpp
     - name: run
-      run: start advance_code_with_cli.exe 
+      run: ./advance_code_with_cli.exe 
      
